@@ -16,7 +16,7 @@ var express = require('express')
 const common = require('./server')
 var compression = require('compression')
 var path = require('path')
-const port = 8080
+const port =  process.env.PORT || 5000
 
 // create a new express server
 const app = express()
