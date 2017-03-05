@@ -1,0 +1,182 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  color: #5F5F5F;
+}
+
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.largeHeader {
+  color: #00BCD4;
+  font-weight: 100;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.subHeader {
+  color: #00BCD4;
+  font-size: 35px;
+  text-align: center;
+  line-height: 55px;
+  font-weight: 100;
+}
+
+.sectionHeader {
+  margin-top: 20px;
+  color: #00BCD4;
+  font-size: 16px;
+}
+
+.errorMsg {
+  color: #FF7777;
+  font-size: 22px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.baseTextAreaContainer {
+  display: flex;
+  height: 110px;
+  margin: 10px;
+}
+
+.baseTextArea {
+  flex: 1;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 18px;
+  resize: none;
+}
+
+.darkBtn {
+  background: #00BCD4;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border-style: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #00BCD4;
+}
+
+.darkBtn:hover {
+  background: #1877E6
+}
+
+.baseDuckContainer {
+  border-radius: 5px;
+  max-width: 450px;
+  margin: 15px auto;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.baseAvatar {
+  width: 75px;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: scale(1.1);
+}
+
+.primaryButton {
+  background: #3B5998;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  border-width: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  background: #1542A0;
+}
+
+.paper {
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.raisedButton {
+  margin-top: 32px;
+}
+
+.employeeName {
+  font-size: 14px;
+  /* padding: 10px; */
+
+}
+
+.executive {
+  font-size: 14px;
+  /* padding: 10px; */
+}
+
+.employeeContainer {
+  margin-bottom: 10px;
+  padding:  20px;
+  border: 2px solid #ddd;
+}
+
+.employeeInfo {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: left;
+}
+
+.employeeTextInfo {
+  padding-left: 20px;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.employeeWithAvatarContainer{
+  padding: 10px 20px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.centeredText {
+ /*  line-height: 45px; */
+}
+
+.name {
+  margin-left: 10px;
+}
+.title {
+  margin-left: 15px;
+}
+
+.testimonialTextStyle {
+  border: 2px solid #eee;
+  background-color: #eee;
+  padding: 10px;
+  color: #888;
+  font-size: 16px;
+}
