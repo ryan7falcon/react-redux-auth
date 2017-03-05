@@ -14,9 +14,7 @@ const MainContainer = React.createClass({
     // users
     isAuthed: PropTypes.bool.isRequired,
     isFetching: PropTypes.bool.isRequired,
-    authUser: PropTypes.func.isRequired,
-    fetchingUserSuccess: PropTypes.func.isRequired,
-    fetchAndHandleUser: PropTypes.func.isRequired,
+    getActiveUser: React.PropTypes.func.isRequired,
     removeFetchingUser: PropTypes.func.isRequired,
   },
   contextTypes: {
@@ -30,7 +28,7 @@ const MainContainer = React.createClass({
       // if not authed but there is a token
       if (checkToken()) {
         // logging in with token
-        this.props.fetchAndHandleUser()
+        this.props.getActiveUser()
       } else {
         // not authed, no token present
         this.props.removeFetchingUser()

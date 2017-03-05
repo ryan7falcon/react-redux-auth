@@ -4,11 +4,14 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import * as userActionCreators from 'reduxModules/modules/users'
+import * as postsActionCreators from 'reduxModules/modules/posts'
 
 const HomeContainer = React.createClass({
   propTypes: {
     // users
     error: PropTypes.string.isRequired,
+    getUser: React.PropTypes.func.isRequired,
+    getPost: React.PropTypes.func.isRequired,
   },
   contextTypes: {
     router: PropTypes.object.isRequired,
@@ -25,10 +28,20 @@ const HomeContainer = React.createClass({
     },
   },
 
+  fetchUser () {
+    this.props.getUser('123')
+  },
+
+  fetchPost() {
+    this.props.getPost('123')
+  },
+
   render () {
     return (
       <Home
         isFetching={false}
+        getUser={this.fetchUser}
+        getPost={this.fetchPost}
         error={this.props.error}
         styles={this.styles}/>
     )
@@ -47,6 +60,7 @@ export default connect(
   (dispatch) => bindActionCreators(
     {
       ...userActionCreators,
+      ...postsActionCreators,
     },
      dispatch
   )

@@ -5,6 +5,7 @@ import { createStore, compose, applyMiddleware, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { routerReducer, syncHistoryWithStore, routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
+import { apiMiddleware } from 'redux-api-middleware'
 
 import * as reducers from 'reduxModules'
 import getRoutes from './config/routes'
@@ -29,7 +30,7 @@ const reducer = combineReducers({...reducers, routing: routerReducer})
 // thunk allows to wrap reducers in dispatch function so in components we don't have to do dispatch(someFunc()) every time, we just do someFunc()
 const enhancer = compose(
   // Middleware you want to use in development:
-  applyMiddleware(thunk, routingMiddleware),
+  applyMiddleware(apiMiddleware, thunk, routingMiddleware),
   window.devToolsExtension ? window.devToolsExtension() : (f) => f
 )
 

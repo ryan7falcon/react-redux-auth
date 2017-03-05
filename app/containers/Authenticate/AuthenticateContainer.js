@@ -11,7 +11,7 @@ const AuthenticateContainer = React.createClass({
   propTypes: {
     // users
     loginWithCredentials: PropTypes.func.isRequired,
-    fetchAndHandleUser: PropTypes.func.isRequired,
+    getActiveUser: React.PropTypes.func.isRequired,
     error: PropTypes.string.isRequired,
 
     // routing.locationBeforeTransitions.state.nextPathname
@@ -31,7 +31,7 @@ const AuthenticateContainer = React.createClass({
   handleAuth (user, password) {
     if (checkToken()) {
       // logging in with token
-      this.props.fetchAndHandleUser()
+      this.props.getActiveUser()
       .then(() => this.context.router.push(this.props.nextPathname))
     } else {
      // logging in with credentials
