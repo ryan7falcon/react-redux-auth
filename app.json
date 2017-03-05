@@ -1,0 +1,15 @@
+{
+  "name": "react-redux-auth",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
