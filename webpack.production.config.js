@@ -33,19 +33,18 @@ module.exports = {
     }, {
       test: /\.css$/,
       use: ExtractTextPlugin.extract({
-        fallbackLoader: 'style-loader',
+        fallbackLoader:  'style-loader',
         use: [
           {
             loader: 'css-loader',
             query: {
               modules: true,
               importLoaders: 1,
-              localIdentName: '[name]--[local]---[hash:base64:5]',
+              localIdentName: '[local]__[hash:base64:5]',
             },
           },
           'postcss-loader',
         ],
-        //publicPath: '/dist',
       }),
     },
     { test: /\.jpg$/, loader: 'file-loader' },
@@ -59,6 +58,7 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       options: {
+        context: __dirname,
         postcss: [
           require('autoprefixer'),
         ],
