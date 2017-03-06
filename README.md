@@ -14,13 +14,22 @@ Boilerplate for react &amp; redux projects with autentication using jwt
 - deployed on heroku https://react-redux-auth-jwt.herokuapp.com/
 
 to use:
+
+```
   git clone https://github.com/ryan7falcon/react-redux-auth.git
   yarn install
+ ```
   
 to run with development settings:
+
+```
   npm run dev
+```
 
 to run with production settings:
+
+```
   npm run build
   npm start
+```
 
